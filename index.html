@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ragnarok: The New World — Official PC/Steam Open-World MMORPG</title>
+  <meta name="description"
+    content="The Brand New RO Sequel, Officially Licensed by Gravity. Experience the first seamless open-world Ragnarok in HD on Steam with 7 launch classes and cross-platform sync." />
+
+  <!-- Fonts for Fantasy Headings & Multi-Language Legibility (EN, TH, ID, ZH-TW, ZH-CN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=Orbitron:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Top PC / Steam Trust HUD Strip -->
+  <div class="pc-hud-strip" role="region" aria-label="Official Platform Info">
+    <div class="container hud-strip-inner">
+      <div class="hud-marquee">
+        <span class="hud-pill">
+          <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+          <span data-i18n="hud_license">Official Gravity License</span>
+        </span>
+        <span class="hud-sep" aria-hidden="true">•</span>
+        <span class="hud-pill">
+          <svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+          </svg>
+          <span data-i18n="hud_free">Free-to-Play on Steam</span>
+        </span>
+        <span class="hud-sep" aria-hidden="true">•</span>
+        <span class="hud-pill">
+          <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" />
+            <path d="M8 21h8M12 17v4" />
+          </svg>
+          <span data-i18n="hud_crossplay">Cross-Platform Sync</span>
+        </span>
+      </div>
+      <div class="hud-status-right">
+        <span class="status-dot"></span>
+        <span data-i18n="hud_server_status">Steam PC Client Ready • Global Launch</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo" aria-label="Ragnarok: The New World Home">
+        <div class="logo-media-wrap">
+          <img src="https://abres.octlib.com/site/sea_official/webp/mobile-header-logo-c6c1ef02.webp"
+            alt="Ragnarok: The New World" class="logo-img" />
+          <div class="logo-fallback" aria-hidden="true">
+            <svg viewBox="0 0 40 40" class="logo-rune-svg">
+              <defs>
+                <linearGradient id="runeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFE082" />
+                  <stop offset="50%" stop-color="#F5C451" />
+                  <stop offset="100%" stop-color="#D97706" />
+                </linearGradient>
+              </defs>
+              <polygon points="20,2 37,11 37,29 20,38 3,29 3,11" fill="#131B2E" stroke="url(#runeGold)"
+                stroke-width="2" />
+              <path d="M20 8L27 20L20 32L13 20Z" fill="url(#runeGold)" opacity="0.9" />
+              <circle cx="20" cy="20" r="3.5" fill="#38BDF8" />
+            </svg>
+            <div class="logo-text-stack">
+              <span class="logo-title">RAGNAROK</span>
+              <span class="logo-sub">THE NEW WORLD</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="#pillars" class="nav-link" data-i18n="nav_world">World</a>
+        <a href="#classes" class="nav-link" data-i18n="nav_classes">7 Classes</a>
+        <a href="#reviews" class="nav-link" data-i18n="nav_reviews">Reviews</a>
+        <a href="#roadmap" class="nav-link" data-i18n="nav_howto">How to Play</a>
+        <a href="#specs" class="nav-link" data-i18n="nav_specs">PC Specs</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- 5-Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="th" aria-pressed="false">TH</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+          <button type="button" class="lang-btn" data-lang="tw" aria-pressed="false">繁中</button>
+          <button type="button" class="lang-btn" data-lang="cn" aria-pressed="false">简中</button>
+        </div>
+
+        <a href="#go2offer#" class="btn btn-primary btn-sm header-cta">
+          <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+          </svg>
+          <span data-i18n="nav_cta">Play on Steam</span>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu"
+          aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-nav">
+        <a href="#pillars" class="mobile-link" data-i18n="nav_world">World</a>
+        <a href="#classes" class="mobile-link" data-i18n="nav_classes">7 Classes</a>
+        <a href="#reviews" class="mobile-link" data-i18n="nav_reviews">Reviews</a>
+        <a href="#roadmap" class="mobile-link" data-i18n="nav_howto">How to Play</a>
+        <a href="#specs" class="mobile-link" data-i18n="nav_specs">PC Specs</a>
+      </nav>
+      <a href="#go2offer#" class="btn btn-primary btn-block">
+        <span data-i18n="cta_primary">Play Free on Steam — Start Your Adventure</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-media-layer" aria-hidden="true">
+        <video class="hero-video" autoplay loop muted playsinline preload="auto" poster="assets/hero-poster.jpg">
+          <source src="https://gdownload.hwrescdn.com/auto_system_upload/2026/07/1783070591999-47.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="hero-fallback-art">
+          <div class="rune-ring rune-ring-1"></div>
+          <div class="rune-ring rune-ring-2"></div>
+          <div class="aether-grid"></div>
+        </div>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Official Gravity License Badge -->
+          <div class="license-badge">
+            <span class="badge-glow-dot"></span>
+            <svg class="badge-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <span data-i18n="badge_license">The Brand New RO Sequel, Officially Licensed by Gravity</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero_headline">
+            The First Seamless Open-World RO — Play Officially in HD on Steam!
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero_subheadline">
+            100% Authentic RO, 100% New Experience. Explore the vast world of RO's new chapter on PC through Steam with
+            cross-platform connectivity.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#go2offer#" class="btn btn-hero-primary">
+              <span class="btn-shine" aria-hidden="true"></span>
+              <svg class="steam-icon-lg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+              </svg>
+              <span class="btn-label" data-i18n="cta_primary">Play Free on Steam — Start Your Adventure</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+
+            <a href="#roadmap" class="btn btn-ghost">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4M12 8h.01" />
+              </svg>
+              <span data-i18n="hero_secondary_btn">3-Step Login Guide</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Indicators -->
+          <div class="hero-trust-row">
+            <div class="trust-chip">
+              <svg class="icon-sm text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span data-i18n="trust_free">Free-to-Play</span>
+            </div>
+            <div class="trust-chip">
+              <svg class="icon-sm text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <span data-i18n="trust_steam">Official Steam Release</span>
+            </div>
+            <div class="trust-chip">
+              <svg class="icon-sm text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+              <span data-i18n="trust_cross">Cross-Platform</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PC Conversion Readiness Card (Right Hero Column on Desktop) -->
+        <aside class="hero-hud-card" aria-label="Steam Launch Quick Overview">
+          <div class="hud-card-header">
+            <span class="hud-tag" data-i18n="hud_card_tag">STEAM PC EDITION</span>
+            <span class="hud-hd-badge">4K / 120 FPS</span>
+          </div>
+          <h2 class="hud-card-title" data-i18n="hud_card_title">Ready for First Login</h2>
+          <ul class="hud-checklist">
+            <li>
+              <span class="check-orb">1</span>
+              <div>
+                <strong data-i18n="hud_item1_title">Seamless Open World</strong>
+                <span data-i18n="hud_item1_sub">Zero loading screens across Midgard</span>
+              </div>
+            </li>
+            <li>
+              <span class="check-orb">2</span>
+              <div>
+                <strong data-i18n="hud_item2_title">7 Launch Classes</strong>
+                <span data-i18n="hud_item2_sub">Classic builds & high-ASPD action</span>
+              </div>
+            </li>
+            <li>
+              <span class="check-orb">3</span>
+              <div>
+                <strong data-i18n="hud_item3_title">First Login Rewards</strong>
+                <span data-i18n="hud_item3_sub">Claim Novice gear at South Gate</span>
+              </div>
+            </li>
+          </ul>
+          <a href="#go2offer#" class="btn btn-steam-badge">
+            <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+            </svg>
+            <div class="steam-badge-text">
+              <small data-i18n="steam_badge_sub">AVAILABLE NOW ON</small>
+              <strong>STEAM PC</strong>
+            </div>
+            <span class="badge-free" data-i18n="steam_badge_free">FREE</span>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Sticky Horizontal-Scroll Showcase -->
+    <div class="showcase-wrapper" id="pillars">
+      <div class="showcase-sticky">
+        <!-- Left-Side Vertical Nav -->
+        <nav class="showcase-nav" aria-label="Feature Showcase Navigation">
+          <button type="button" class="showcase-nav-item is-active" data-showcase-slide="0">
+            <span class="showcase-diamond" aria-hidden="true"></span>
+            <span class="showcase-nav-label" data-i18n="pillar1_tag">SEAMLESS WORLD</span>
+          </button>
+          <button type="button" class="showcase-nav-item" data-showcase-slide="1">
+            <span class="showcase-diamond" aria-hidden="true"></span>
+            <span class="showcase-nav-label" data-i18n="pillar2_tag">7 CLASSES • HIGH ASPD</span>
+          </button>
+          <button type="button" class="showcase-nav-item" data-showcase-slide="2">
+            <span class="showcase-diamond" aria-hidden="true"></span>
+            <span class="showcase-nav-label" data-i18n="pillar3_tag">SOUTH GATE REUNION</span>
+          </button>
+        </nav>
+
+        <!-- Horizontal Slide Track -->
+        <div class="showcase-track">
+          <!-- Slide 1: Seamless Open World -->
+          <div class="showcase-slide is-active" data-slide-index="0">
+            <div class="showcase-slide-bg">
+              <video class="showcase-slide-media" autoplay loop muted playsinline>
+                <source src="https://gdownload.hwrescdn.com/auto_system_upload/2026/06/1782461653537-29.mov"
+                  type="video/mp4">
+              </video>
+              <div class="showcase-slide-fallback media-theme-world">
+                <svg viewBox="0 0 64 64" class="fallback-svg" aria-hidden="true">
+                  <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-dasharray="4 4" />
+                  <path d="M32 10v44M10 32h44M17 17l30 30M47 17L17 47" stroke="currentColor" stroke-width="1.2"
+                    opacity="0.5" />
+                  <circle cx="32" cy="32" r="8" fill="currentColor" opacity="0.25" />
+                </svg>
+              </div>
+              <div class="showcase-slide-overlay"></div>
+            </div>
+            <div class="showcase-slide-content">
+              <span class="showcase-eyebrow" data-i18n="pillars_eyebrow">NEXT-GEN MIDGARD EXPERIENCE</span>
+              <h3 class="showcase-slide-title" data-i18n="pillar1_heading">Seamless Open World &amp; Dynamic Weather
+              </h3>
+              <p class="showcase-slide-desc" data-i18n="feature_1">
+                RO x Seamless Open World — Experience the heartbeat of Midgard with a dynamic four-season weather system
+                and random encounter quests.
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 2: 7 Classes & ASPD Combat -->
+          <div class="showcase-slide" data-slide-index="1">
+            <div class="showcase-slide-bg">
+              <video class="showcase-slide-media" autoplay loop muted playsinline>
+                <source src="https://gdownload.hwrescdn.com/auto_system_upload/2026/11/1794896427919-11.mov"
+                  type="video/mp4">
+              </video>
+              <div class="showcase-slide-overlay"></div>
+            </div>
+            <div class="showcase-slide-content">
+              <span class="showcase-eyebrow" data-i18n="pillars_eyebrow">NEXT-GEN MIDGARD EXPERIENCE</span>
+              <h3 class="showcase-slide-title" data-i18n="pillar2_heading">7 Launch Classes &amp; Classic Builds
+                Upgraded
+              </h3>
+              <p class="showcase-slide-desc" data-i18n="feature_2">
+                Never Before in RO History: Launch with 7 Iconic Classes! Classic builds with fresh upgrades and
+                exhilarating attack speed (ASPD).
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 3: South Gate Social Hub -->
+          <div class="showcase-slide" data-slide-index="2">
+            <div class="showcase-slide-bg">
+              <video class="showcase-slide-media" autoplay loop muted playsinline>
+                <source src="https://gdownload.hwrescdn.com/auto_system_upload/2026/06/1782461602579-7.mov"
+                  type="video/mp4">
+              </video>
+              <div class="showcase-slide-fallback media-theme-southgate">
+                <svg viewBox="0 0 64 64" class="fallback-svg" aria-hidden="true">
+                  <path d="M14 50V26a18 18 0 0 1 36 0v24" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M8 50h48" stroke="#F5C451" stroke-width="2" />
+                  <circle cx="32" cy="24" r="5" fill="#38BDF8" opacity="0.6" />
+                </svg>
+              </div>
+              <div class="showcase-slide-overlay"></div>
+            </div>
+            <div class="showcase-slide-content">
+              <span class="showcase-eyebrow" data-i18n="pillars_eyebrow">NEXT-GEN MIDGARD EXPERIENCE</span>
+              <h3 class="showcase-slide-title" data-i18n="pillar3_heading">Nostalgia &amp; Social Co-op Adventures</h3>
+              <p class="showcase-slide-desc" data-i18n="feature_3">
+                Welcome Home, Novices! Meet old friends at the South Gate and embark on a new adventure together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive 7 Classes Showcase -->
+    <section class="section classes-section" id="classes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="classes_eyebrow">CHOOSE YOUR STARTING PATH</span>
+          <h2 class="section-title" data-i18n="classes_title">Preview the 7 Launch Classes Before You Install</h2>
+          <p class="section-subtitle" data-i18n="classes_subtitle">
+            Pick your favorite archetype, inspect its combat stats, and jump straight into Steam to create your Novice.
+          </p>
+        </div>
+
+        <!-- Interactive 7 Classes Horizontal Accordion -->
+        <div class="classes-accordion" id="classes-accordion" role="tablist" aria-label="7 Launch Classes">
+
+          <!-- Card 01: Swordsman -->
+          <article class="class-card is-active" data-class-index="0" role="tab" tabindex="0" aria-expanded="true">
+            <div class="card-collapsed">
+              <div class="card-thumb-bg" style="background-image: url('https://abres.octlib.com/site/sea_official/webp/m-swordman-3031dbd1.webp');"></div>
+              <div class="card-collapsed-overlay"></div>
+              <div class="card-collapsed-content">
+                <span class="card-collapsed-num">01</span>
+                <span class="card-collapsed-name" data-i18n="class_0_name">Swordsman</span>
+              </div>
+            </div>
+            <div class="card-expanded">
+              <div class="card-expanded-grid">
+                <div class="card-visual">
+                  <div class="card-aura-bg" style="background: radial-gradient(circle at 50% 50%, rgba(245, 196, 81, 0.25), transparent 65%);"></div>
+                  <div class="card-rune-circle" aria-hidden="true"></div>
+                  <img src="https://abres.octlib.com/site/sea_official/webp/m-swordman-3031dbd1.webp" alt="Swordsman" class="card-art-img" loading="lazy" />
+                  <span class="card-watermark">01</span>
+                </div>
+                <div class="card-details">
+                  <div class="card-badges">
+                    <span class="class-role-pill card-role-txt">Frontline Vanguard / Tank</span>
+                    <span class="class-weapon-pill card-weapon-txt">Weapon: Greatsword &amp; Shield</span>
+                  </div>
+                  <h3 class="card-title card-title-txt">Swordsman</h3>
+                  <p class="card-desc card-desc-txt">Master of melee dominance and unbreakable defense. Lead guild raids with sweeping AoE slashes and high-vitality endurance.</p>
+                  <div class="class-stats-grid">
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_atk">Attack</span>
+                        <span class="stat-val">88</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-gold" data-stat-target="88" style="width: 88%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_def">Defense</span>
+                        <span class="stat-val">92</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-cyan" data-stat-target="92" style="width: 92%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_spd">ASPD / Mobility</span>
+                        <span class="stat-val">72</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-emerald" data-stat-target="72" style="width: 72%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_sup">Support / Utility</span>
+                        <span class="stat-val">60</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-violet" data-stat-target="60" style="width: 60%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-cta-bar">
+                    <a href="#go2offer#" class="btn btn-primary">
+                      <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+                      </svg>
+                      <span data-i18n="class_cta">Select This Class &amp; Play on Steam</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 02: Mage -->
+          <article class="class-card" data-class-index="1" role="tab" tabindex="0" aria-expanded="false">
+            <div class="card-collapsed">
+              <div class="card-thumb-bg" style="background-image: url('https://abres.octlib.com/site/sea_official/webp/mage-513e3bee.webp');"></div>
+              <div class="card-collapsed-overlay"></div>
+              <div class="card-collapsed-content">
+                <span class="card-collapsed-num">02</span>
+                <span class="card-collapsed-name" data-i18n="class_1_name">Mage</span>
+              </div>
+            </div>
+            <div class="card-expanded">
+              <div class="card-expanded-grid">
+                <div class="card-visual">
+                  <div class="card-aura-bg" style="background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.28), transparent 65%);"></div>
+                  <div class="card-rune-circle" aria-hidden="true"></div>
+                  <img src="https://abres.octlib.com/site/sea_official/webp/mage-513e3bee.webp" alt="Mage" class="card-art-img" loading="lazy" />
+                  <span class="card-watermark">02</span>
+                </div>
+                <div class="card-details">
+                  <div class="card-badges">
+                    <span class="class-role-pill card-role-txt">Elemental Burst / AoE DPS</span>
+                    <span class="class-weapon-pill card-weapon-txt">Weapon: Arcane Staff &amp; Grimoire</span>
+                  </div>
+                  <h3 class="card-title card-title-txt">Mage</h3>
+                  <p class="card-desc card-desc-txt">Command Fire, Ice, and Lightning in seamless open-world battles. Shatter enemy formations with devastating elemental storms.</p>
+                  <div class="class-stats-grid">
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_atk">Attack</span>
+                        <span class="stat-val">96</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-gold" data-stat-target="96" style="width: 96%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_def">Defense</span>
+                        <span class="stat-val">46</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-cyan" data-stat-target="46" style="width: 46%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_spd">ASPD / Mobility</span>
+                        <span class="stat-val">68</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-emerald" data-stat-target="68" style="width: 68%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_sup">Support / Utility</span>
+                        <span class="stat-val">74</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-violet" data-stat-target="74" style="width: 74%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-cta-bar">
+                    <a href="#go2offer#" class="btn btn-primary">
+                      <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+                      </svg>
+                      <span data-i18n="class_cta">Select This Class &amp; Play on Steam</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 03: Archer -->
+          <article class="class-card" data-class-index="2" role="tab" tabindex="0" aria-expanded="false">
+            <div class="card-collapsed">
+              <div class="card-thumb-bg" style="background-image: url('https://abres.octlib.com/site/sea_official/webp/m-archer-19dba72f.webp');"></div>
+              <div class="card-collapsed-overlay"></div>
+              <div class="card-collapsed-content">
+                <span class="card-collapsed-num">03</span>
+                <span class="card-collapsed-name" data-i18n="class_2_name">Archer</span>
+              </div>
+            </div>
+            <div class="card-expanded">
+              <div class="card-expanded-grid">
+                <div class="card-visual">
+                  <div class="card-aura-bg" style="background: radial-gradient(circle at 50% 50%, rgba(52, 211, 153, 0.26), transparent 65%);"></div>
+                  <div class="card-rune-circle" aria-hidden="true"></div>
+                  <img src="https://abres.octlib.com/site/sea_official/webp/m-archer-19dba72f.webp" alt="Archer" class="card-art-img" loading="lazy" />
+                  <span class="card-watermark">03</span>
+                </div>
+                <div class="card-details">
+                  <div class="card-badges">
+                    <span class="class-role-pill card-role-txt">Long-Range Marksman / High ASPD</span>
+                    <span class="class-weapon-pill card-weapon-txt">Weapon: Composite Bow &amp; Quiver</span>
+                  </div>
+                  <h3 class="card-title card-title-txt">Archer</h3>
+                  <p class="card-desc card-desc-txt">Unleash rapid-fire arrow volleys with upgraded ASPD builds. Kite MVP bosses effortlessly across dynamic Midgard terrain.</p>
+                  <div class="class-stats-grid">
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_atk">Attack</span>
+                        <span class="stat-val">89</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-gold" data-stat-target="89" style="width: 89%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_def">Defense</span>
+                        <span class="stat-val">54</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-cyan" data-stat-target="54" style="width: 54%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_spd">ASPD / Mobility</span>
+                        <span class="stat-val">95</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-emerald" data-stat-target="95" style="width: 95%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_sup">Support / Utility</span>
+                        <span class="stat-val">62</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-violet" data-stat-target="62" style="width: 62%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-cta-bar">
+                    <a href="#go2offer#" class="btn btn-primary">
+                      <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+                      </svg>
+                      <span data-i18n="class_cta">Select This Class &amp; Play on Steam</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 04: Acolyte -->
+          <article class="class-card" data-class-index="3" role="tab" tabindex="0" aria-expanded="false">
+            <div class="card-collapsed">
+              <div class="card-thumb-bg" style="background-image: url('https://abres.octlib.com/site/sea_official/webp/m-acolyte-6881c6bf.webp');"></div>
+              <div class="card-collapsed-overlay"></div>
+              <div class="card-collapsed-content">
+                <span class="card-collapsed-num">04</span>
+                <span class="card-collapsed-name" data-i18n="class_3_name">Acolyte</span>
+              </div>
+            </div>
+            <div class="card-expanded">
+              <div class="card-expanded-grid">
+                <div class="card-visual">
+                  <div class="card-aura-bg" style="background: radial-gradient(circle at 50% 50%, rgba(167, 139, 250, 0.28), transparent 65%);"></div>
+                  <div class="card-rune-circle" aria-hidden="true"></div>
+                  <img src="https://abres.octlib.com/site/sea_official/webp/m-acolyte-6881c6bf.webp" alt="Acolyte" class="card-art-img" loading="lazy" />
+                  <span class="card-watermark">04</span>
+                </div>
+                <div class="card-details">
+                  <div class="card-badges">
+                    <span class="class-role-pill card-role-txt">Holy Healer / Party Buffer</span>
+                    <span class="class-weapon-pill card-weapon-txt">Weapon: Sacred Mace &amp; Rod</span>
+                  </div>
+                  <h3 class="card-title card-title-txt">Acolyte</h3>
+                  <p class="card-desc card-desc-txt">The indispensable heart of every party. Empower allies with classic Blessing and Heal buffs or smite undead forces.</p>
+                  <div class="class-stats-grid">
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_atk">Attack</span>
+                        <span class="stat-val">64</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-gold" data-stat-target="64" style="width: 64%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_def">Defense</span>
+                        <span class="stat-val">78</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-cyan" data-stat-target="78" style="width: 78%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_spd">ASPD / Mobility</span>
+                        <span class="stat-val">70</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-emerald" data-stat-target="70" style="width: 70%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_sup">Support / Utility</span>
+                        <span class="stat-val">98</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-violet" data-stat-target="98" style="width: 98%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-cta-bar">
+                    <a href="#go2offer#" class="btn btn-primary">
+                      <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+                      </svg>
+                      <span data-i18n="class_cta">Select This Class &amp; Play on Steam</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 05: Thief -->
+          <article class="class-card" data-class-index="4" role="tab" tabindex="0" aria-expanded="false">
+            <div class="card-collapsed">
+              <div class="card-thumb-bg" style="background-image: url('https://abres.octlib.com/site/sea_official/webp/m-thief-32b75858.webp');"></div>
+              <div class="card-collapsed-overlay"></div>
+              <div class="card-collapsed-content">
+                <span class="card-collapsed-num">05</span>
+                <span class="card-collapsed-name" data-i18n="class_4_name">Thief</span>
+              </div>
+            </div>
+            <div class="card-expanded">
+              <div class="card-expanded-grid">
+                <div class="card-visual">
+                  <div class="card-aura-bg" style="background: radial-gradient(circle at 50% 50%, rgba(244, 63, 94, 0.25), transparent 65%);"></div>
+                  <div class="card-rune-circle" aria-hidden="true"></div>
+                  <img src="https://abres.octlib.com/site/sea_official/webp/m-thief-32b75858.webp" alt="Thief" class="card-art-img" loading="lazy" />
+                  <span class="card-watermark">05</span>
+                </div>
+                <div class="card-details">
+                  <div class="card-badges">
+                    <span class="class-role-pill card-role-txt">Critical Assassin / Evasion Striker</span>
+                    <span class="class-weapon-pill card-weapon-txt">Weapon: Twin Daggers &amp; Katar</span>
+                  </div>
+                  <h3 class="card-title card-title-txt">Thief</h3>
+                  <p class="card-desc card-desc-txt">Strike from the shadows with blistering ASPD and lethal critical chains while dodging incoming boss attacks.</p>
+                  <div class="class-stats-grid">
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_atk">Attack</span>
+                        <span class="stat-val">92</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-gold" data-stat-target="92" style="width: 92%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_def">Defense</span>
+                        <span class="stat-val">58</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-cyan" data-stat-target="58" style="width: 58%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_spd">ASPD / Mobility</span>
+                        <span class="stat-val">98</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-emerald" data-stat-target="98" style="width: 98%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_sup">Support / Utility</span>
+                        <span class="stat-val">55</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-violet" data-stat-target="55" style="width: 55%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-cta-bar">
+                    <a href="#go2offer#" class="btn btn-primary">
+                      <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+                      </svg>
+                      <span data-i18n="class_cta">Select This Class &amp; Play on Steam</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 06: Merchant -->
+          <article class="class-card" data-class-index="5" role="tab" tabindex="0" aria-expanded="false">
+            <div class="card-collapsed">
+              <div class="card-thumb-bg" style="background-image: url('https://abres.octlib.com/site/sea_official/webp/merchant-7931e0e6.webp');"></div>
+              <div class="card-collapsed-overlay"></div>
+              <div class="card-collapsed-content">
+                <span class="card-collapsed-num">06</span>
+                <span class="card-collapsed-name" data-i18n="class_5_name">Merchant</span>
+              </div>
+            </div>
+            <div class="card-expanded">
+              <div class="card-expanded-grid">
+                <div class="card-visual">
+                  <div class="card-aura-bg" style="background: radial-gradient(circle at 50% 50%, rgba(251, 146, 60, 0.26), transparent 65%);"></div>
+                  <div class="card-rune-circle" aria-hidden="true"></div>
+                  <img src="https://abres.octlib.com/site/sea_official/webp/merchant-7931e0e6.webp" alt="Merchant" class="card-art-img" loading="lazy" />
+                  <span class="card-watermark">06</span>
+                </div>
+                <div class="card-details">
+                  <div class="card-badges">
+                    <span class="class-role-pill card-role-txt">Battle Crafter / Zeny Tactician</span>
+                    <span class="class-weapon-pill card-weapon-txt">Weapon: Heavy Axe &amp; Battle Cart</span>
+                  </div>
+                  <h3 class="card-title card-title-txt">Merchant</h3>
+                  <p class="card-desc card-desc-txt">Crush enemies with Mammonite strikes and Battle Cart charges while mastering Midgard trade, forging, and economy.</p>
+                  <div class="class-stats-grid">
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_atk">Attack</span>
+                        <span class="stat-val">84</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-gold" data-stat-target="84" style="width: 84%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_def">Defense</span>
+                        <span class="stat-val">78</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-cyan" data-stat-target="78" style="width: 78%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_spd">ASPD / Mobility</span>
+                        <span class="stat-val">74</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-emerald" data-stat-target="74" style="width: 74%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_sup">Support / Utility</span>
+                        <span class="stat-val">86</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-violet" data-stat-target="86" style="width: 86%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-cta-bar">
+                    <a href="#go2offer#" class="btn btn-primary">
+                      <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+                      </svg>
+                      <span data-i18n="class_cta">Select This Class &amp; Play on Steam</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 07: Gunslinger -->
+          <article class="class-card" data-class-index="6" role="tab" tabindex="0" aria-expanded="false">
+            <div class="card-collapsed">
+              <div class="card-thumb-bg" style="background-image: url('https://abres.octlib.com/site/sea_official/webp/m-gunslinger-e1beb2fd.webp');"></div>
+              <div class="card-collapsed-overlay"></div>
+              <div class="card-collapsed-content">
+                <span class="card-collapsed-num">07</span>
+                <span class="card-collapsed-name" data-i18n="class_6_name">Gunslinger</span>
+              </div>
+            </div>
+            <div class="card-expanded">
+              <div class="card-expanded-grid">
+                <div class="card-visual">
+                  <div class="card-aura-bg" style="background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.3), transparent 65%);"></div>
+                  <div class="card-rune-circle" aria-hidden="true"></div>
+                  <img src="https://abres.octlib.com/site/sea_official/webp/m-gunslinger-e1beb2fd.webp" alt="Gunslinger" class="card-art-img" loading="lazy" />
+                  <span class="card-watermark">07</span>
+                </div>
+                <div class="card-details">
+                  <div class="card-badges">
+                    <span class="class-role-pill card-role-txt">Special 7th Launch Class / Dual-Pistol DPS</span>
+                    <span class="class-weapon-pill card-weapon-txt">Weapon: Twin Pistols &amp; Rifle</span>
+                  </div>
+                  <h3 class="card-title card-title-txt">Gunslinger</h3>
+                  <p class="card-desc card-desc-txt">Making history as part of RO’s 7-class launch! Unload high-ASPD bullet barrages and stylish ranged combos.</p>
+                  <div class="class-stats-grid">
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_atk">Attack</span>
+                        <span class="stat-val">94</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-gold" data-stat-target="94" style="width: 94%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_def">Defense</span>
+                        <span class="stat-val">52</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-cyan" data-stat-target="52" style="width: 52%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_spd">ASPD / Mobility</span>
+                        <span class="stat-val">96</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-emerald" data-stat-target="96" style="width: 96%;"></div>
+                      </div>
+                    </div>
+                    <div class="stat-row">
+                      <div class="stat-label-wrap">
+                        <span data-i18n="stat_sup">Support / Utility</span>
+                        <span class="stat-val">66</span>
+                      </div>
+                      <div class="stat-track">
+                        <div class="stat-fill fill-violet" data-stat-target="66" style="width: 66%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-cta-bar">
+                    <a href="#go2offer#" class="btn btn-primary">
+                      <svg class="steam-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+                      </svg>
+                      <span data-i18n="class_cta">Select This Class &amp; Play on Steam</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Adventurer Reviews -->
+    <section class="section reviews-section" id="reviews">
+      <div class="reviews-ambient-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header reviews-reveal">
+          <span class="section-eyebrow" data-i18n="reviews_eyebrow">ADVENTURER REVIEWS</span>
+          <h2 class="section-title" data-i18n="reviews_title">The Next Chapter, Through Adventurers' Eyes</h2>
+          <p class="section-subtitle" data-i18n="reviews_subtitle">
+            From a smooth Steam setup to familiar faces at South Gate, celebrate the moments that make Midgard feel like home.
+          </p>
+        </div>
+
+        <div class="reviews-trust-bar reviews-reveal" aria-label="Community highlights" data-i18n-aria-label="reviews_highlights">
+          <span class="reviews-trust-rating" aria-label="Five stars" data-i18n-aria-label="reviews_rating">★★★★★</span>
+          <span class="reviews-trust-item" data-i18n="reviews_trust_community">Steam community spirit</span>
+          <span class="reviews-trust-divider" aria-hidden="true"></span>
+          <span class="reviews-trust-item" data-i18n="reviews_trust_pc">Lightweight PC adventures</span>
+          <span class="reviews-trust-divider" aria-hidden="true"></span>
+          <span class="reviews-trust-item" data-i18n="reviews_trust_nostalgia">South Gate nostalgia</span>
+        </div>
+        <p class="reviews-disclaimer" data-i18n="reviews_disclaimer">Illustrative adventurer quotes; not verified player or Steam reviews.</p>
+      </div>
+
+      <div class="reviews-marquee reviews-reveal" aria-label="Adventurer review highlights" data-i18n-aria-label="reviews_marquee_label">
+        <div class="reviews-row reviews-row-forward" tabindex="0" aria-label="First review row" data-i18n-aria-label="reviews_row_first">
+          <div class="reviews-track">
+            <div class="reviews-card-group">
+              <article class="review-card review-card-featured">
+                <div class="review-card-top">
+                  <div class="review-avatar">SG</div>
+                  <div class="review-player">
+                    <strong>SouthGateMain</strong>
+                    <span data-i18n="class_0_name">Swordsman</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_1">That South Gate reunion hit me right in the nostalgia. Feels like coming home, with a whole new world to explore.</p>
+                <span class="review-featured-label" data-i18n="reviews_featured">Featured voice</span>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top">
+                  <div class="review-avatar review-avatar-cyan">MB</div>
+                  <div class="review-player">
+                    <strong>ManaBreak</strong>
+                    <span data-i18n="class_1_name">Mage</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_2">Steam made getting started simple. I was picking a class and planning my first build in no time.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top">
+                  <div class="review-avatar review-avatar-gold">QS</div>
+                  <div class="review-player">
+                    <strong>QuickShotRO</strong>
+                    <span data-i18n="class_2_name">Archer</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_3">Runs nicely on my everyday PC, and the world feels great to explore between quests.</p>
+              </article>
+              <article class="review-card review-card-featured">
+                <div class="review-card-top">
+                  <div class="review-avatar review-avatar-cyan">HL</div>
+                  <div class="review-player">
+                    <strong>HealLoop</strong>
+                    <span data-i18n="class_3_name">Acolyte</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_4">Seven classes means seven reasons to start over. My party already has plans for our next login.</p>
+                <span class="review-featured-label" data-i18n="reviews_featured">Featured voice</span>
+              </article>
+            </div>
+            <div class="reviews-card-group" aria-hidden="true">
+              <article class="review-card review-card-featured">
+                <div class="review-card-top"><div class="review-avatar">SG</div><div class="review-player"><strong>SouthGateMain</strong><span data-i18n="class_0_name">Swordsman</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_1">That South Gate reunion hit me right in the nostalgia. Feels like coming home, with a whole new world to explore.</p>
+                <span class="review-featured-label" data-i18n="reviews_featured">Featured voice</span>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top"><div class="review-avatar review-avatar-cyan">MB</div><div class="review-player"><strong>ManaBreak</strong><span data-i18n="class_1_name">Mage</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_2">Steam made getting started simple. I was picking a class and planning my first build in no time.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top"><div class="review-avatar review-avatar-gold">QS</div><div class="review-player"><strong>QuickShotRO</strong><span data-i18n="class_2_name">Archer</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_3">Runs nicely on my everyday PC, and the world feels great to explore between quests.</p>
+              </article>
+              <article class="review-card review-card-featured">
+                <div class="review-card-top"><div class="review-avatar review-avatar-cyan">HL</div><div class="review-player"><strong>HealLoop</strong><span data-i18n="class_3_name">Acolyte</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_4">Seven classes means seven reasons to start over. My party already has plans for our next login.</p>
+                <span class="review-featured-label" data-i18n="reviews_featured">Featured voice</span>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-row reviews-row-reverse" tabindex="0" aria-label="Second review row" data-i18n-aria-label="reviews_row_second">
+          <div class="reviews-track">
+            <div class="reviews-card-group">
+              <article class="review-card">
+                <div class="review-card-top">
+                  <div class="review-avatar review-avatar-gold">SD</div>
+                  <div class="review-player">
+                    <strong>ShadowDash</strong>
+                    <span data-i18n="class_4_name">Thief</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_5">Fast-paced fights and a world that keeps opening up. Sneaking off to explore is half the fun.</p>
+              </article>
+              <article class="review-card review-card-featured">
+                <div class="review-card-top">
+                  <div class="review-avatar">ZC</div>
+                  <div class="review-player">
+                    <strong>ZenyCrafter</strong>
+                    <span data-i18n="class_5_name">Merchant</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_6">My Merchant finally gets the spotlight. Love having a fresh world and familiar class vibes to dive into.</p>
+                <span class="review-featured-label" data-i18n="reviews_featured">Featured voice</span>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top">
+                  <div class="review-avatar review-avatar-cyan">FL</div>
+                  <div class="review-player">
+                    <strong>FirstLogin</strong>
+                    <span data-i18n="class_0_name">Swordsman</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_7">Claiming that first-login gear and heading out from South Gate is such a good start to an adventure.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top">
+                  <div class="review-avatar review-avatar-gold">GS</div>
+                  <div class="review-player">
+                    <strong>GuildSignal</strong>
+                    <span data-i18n="class_3_name">Acolyte</span>
+                  </div>
+                  <span class="review-badge" data-i18n="reviews_badge">Adventurer</span>
+                </div>
+                <div class="review-stars" aria-label="5 out of 5 stars" data-i18n-aria-label="reviews_rating">★★★★★</div>
+                <p class="review-quote" data-i18n="reviews_quote_8">The best part is getting the guild together again. Midgard adventures are better with friends.</p>
+              </article>
+            </div>
+            <div class="reviews-card-group" aria-hidden="true">
+              <article class="review-card">
+                <div class="review-card-top"><div class="review-avatar review-avatar-gold">SD</div><div class="review-player"><strong>ShadowDash</strong><span data-i18n="class_4_name">Thief</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_5">Fast-paced fights and a world that keeps opening up. Sneaking off to explore is half the fun.</p>
+              </article>
+              <article class="review-card review-card-featured">
+                <div class="review-card-top"><div class="review-avatar">ZC</div><div class="review-player"><strong>ZenyCrafter</strong><span data-i18n="class_5_name">Merchant</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_6">My Merchant finally gets the spotlight. Love having a fresh world and familiar class vibes to dive into.</p>
+                <span class="review-featured-label" data-i18n="reviews_featured">Featured voice</span>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top"><div class="review-avatar review-avatar-cyan">FL</div><div class="review-player"><strong>FirstLogin</strong><span data-i18n="class_0_name">Swordsman</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_7">Claiming that first-login gear and heading out from South Gate is such a good start to an adventure.</p>
+              </article>
+              <article class="review-card">
+                <div class="review-card-top"><div class="review-avatar review-avatar-gold">GS</div><div class="review-player"><strong>GuildSignal</strong><span data-i18n="class_3_name">Acolyte</span></div><span class="review-badge" data-i18n="reviews_badge">Adventurer</span></div>
+                <div class="review-stars">★★★★★</div><p class="review-quote" data-i18n="reviews_quote_8">The best part is getting the guild together again. Midgard adventures are better with friends.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Step First Login Roadmap (Conversion Booster) -->
+    <section class="section roadmap-section" id="roadmap">
+      <canvas class="roadmap-particles-canvas" id="roadmap-particles-canvas" aria-hidden="true"></canvas>
+      <div class="roadmap-bg-glow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="roadmap_eyebrow">FAST-TRACK TO MIDGARD</span>
+          <h2 class="section-title" data-i18n="roadmap_title">How to Enter Midgard in 3 Simple Steps</h2>
+          <p class="section-subtitle roadmap-reveal" data-i18n="roadmap_subtitle">
+            Complete your installation and First Login in minutes to unlock your South Gate adventure.
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="roadmap-connector" aria-hidden="true">
+            <span class="energy-beam"></span>
+            <span class="energy-pulse"></span>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="step-card roadmap-reveal" data-step-index="0" tabindex="0" role="region" aria-label="Step 1: Access Official Steam Page">
+            <div class="step-badge-wrap">
+              <div class="step-badge">01</div>
+              <span class="badge-pulse-ring" aria-hidden="true"></span>
+            </div>
+            <div class="step-icon-box step-icon-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              </svg>
+            </div>
+            <p class="step-text" data-i18n="roadmap_step1">
+              1. Access Official Steam Page — Click the button below to open Ragnarok: The New World on Steam.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card roadmap-reveal" data-step-index="1" tabindex="0" role="region" aria-label="Step 2: Free Download & Install">
+            <div class="step-badge-wrap">
+              <div class="step-badge">02</div>
+              <span class="badge-pulse-ring" aria-hidden="true"></span>
+            </div>
+            <div class="step-icon-box step-icon-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
+            </div>
+            <p class="step-text" data-i18n="roadmap_step2">
+              2. Free Download &amp; Install — Install the official PC client with lightweight system requirements.
+            </p>
+          </div>
+
+          <!-- Step 3 (KPI Highlight) -->
+          <div class="step-card step-card-kpi roadmap-reveal" data-step-index="2" tabindex="0" role="region" aria-label="Step 3: Launch & Complete First Login">
+            <div class="step-badge-wrap">
+              <div class="step-badge badge-gold">03</div>
+              <span class="badge-pulse-ring" aria-hidden="true"></span>
+            </div>
+            <div class="step-icon-box icon-gold step-icon-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" />
+              </svg>
+            </div>
+            <p class="step-text" data-i18n="roadmap_step3">
+              3. Launch &amp; Complete First Login — Log into the game, create your Novice, and claim your new-player
+              start at the South Gate!
+            </p>
+            <span class="kpi-pill" data-i18n="roadmap_kpi_tag">FIRST LOGIN BONUS READY</span>
+          </div>
+        </div>
+
+        <div class="roadmap-cta-center roadmap-reveal">
+          <a href="#go2offer#" class="btn btn-hero-primary roadmap-cta-btn">
+            <span class="btn-shine" aria-hidden="true"></span>
+            <svg class="steam-icon-lg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+            </svg>
+            <span data-i18n="cta_primary">Play Free on Steam — Start Your Adventure</span>
+          </a>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+
+    <!-- PC System Requirements & Reassurance Block -->
+    <section class="section specs-section" id="specs">
+      <div class="specs-atmosphere" aria-hidden="true">
+        <span class="spec-ember spec-ember-1"></span>
+        <span class="spec-ember spec-ember-2"></span>
+        <span class="spec-ember spec-ember-3"></span>
+        <span class="spec-ember spec-ember-4"></span>
+        <span class="spec-ember spec-ember-5"></span>
+      </div>
+      <div class="container">
+        <div class="section-header specs-reveal">
+          <span class="section-eyebrow" data-i18n="specs_eyebrow">OPTIMIZED FOR PC &amp; STEAM</span>
+          <h2 class="section-title" data-i18n="specs_title">PC System Requirements &amp; Player Reassurance</h2>
+          <p class="section-subtitle" data-i18n="specs_subtitle">
+            Engineered to run smoothly in crisp HD even on mid-range laptops and desktops.
+          </p>
+        </div>
+
+        <div class="specs-layout">
+          <!-- Minimum vs Recommended Table -->
+          <div class="specs-cards-wrap">
+            <div class="spec-card specs-reveal" data-spec-tier="minimum">
+              <span class="spec-card-sheen" aria-hidden="true"></span>
+              <div class="spec-card-head">
+                <h3 data-i18n="spec_min_title">Minimum Requirements</h3>
+                <span class="spec-badge" data-i18n="spec_min_badge">60 FPS Ready</span>
+              </div>
+              <dl class="spec-list">
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 5.2 7.3-1v7H3zM12 3.9 21 2.5v8.7h-9zM3 13h7.3v7L3 19zM12 13h9v8.5L12 20z" /></svg>
+                    <span data-i18n="spec_os">OS</span>
+                  </dt>
+                  <dd>Windows 10 (64-bit)<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 42%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4M10 10h4v4h-4z" /></svg>
+                    <span data-i18n="spec_cpu">Processor</span>
+                  </dt>
+                  <dd>Intel Core i5-8400 / AMD Ryzen 5 2600<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 46%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="2" /><path d="M7 10v4m4-4v4m4-4v4m4-4v4M6 17v3m4-3v3m4-3v3m4-3v3" /></svg>
+                    <span data-i18n="spec_ram">Memory</span>
+                  </dt>
+                  <dd>8 GB RAM<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 40%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" /><path d="M7 10h6m-6 3h4m8-3h.01M7 18v2m10-2v2" /></svg>
+                    <span data-i18n="spec_gpu">Graphics</span>
+                  </dt>
+                  <dd>NVIDIA GTX 1050 Ti / Radeon RX 570<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 44%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg>
+                    <span data-i18n="spec_storage">Storage</span>
+                  </dt>
+                  <dd>20 GB Available Space<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 38%;"></span></span></dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="spec-card spec-card-rec specs-reveal" data-spec-tier="recommended">
+              <span class="spec-card-sheen" aria-hidden="true"></span>
+              <div class="spec-card-head">
+                <h3 data-i18n="spec_rec_title">Recommended Requirements</h3>
+                <span class="spec-badge badge-rec" data-i18n="spec_rec_badge">HD Ultra / 120 FPS</span>
+              </div>
+              <dl class="spec-list">
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 5.2 7.3-1v7H3zM12 3.9 21 2.5v8.7h-9zM3 13h7.3v7L3 19zM12 13h9v8.5L12 20z" /></svg>
+                    <span data-i18n="spec_os">OS</span>
+                  </dt>
+                  <dd>Windows 10 / 11 (64-bit)<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 82%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4M10 10h4v4h-4z" /></svg>
+                    <span data-i18n="spec_cpu">Processor</span>
+                  </dt>
+                  <dd>Intel Core i7-10700 / AMD Ryzen 5 5600X<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 88%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="2" /><path d="M7 10v4m4-4v4m4-4v4m4-4v4M6 17v3m4-3v3m4-3v3m4-3v3" /></svg>
+                    <span data-i18n="spec_ram">Memory</span>
+                  </dt>
+                  <dd>16 GB RAM<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 80%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" /><path d="M7 10h6m-6 3h4m8-3h.01M7 18v2m10-2v2" /></svg>
+                    <span data-i18n="spec_gpu">Graphics</span>
+                  </dt>
+                  <dd>NVIDIA RTX 2060 / Radeon RX 6600<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 86%;"></span></span></dd>
+                </div>
+                <div class="spec-row">
+                  <dt>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3" /><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg>
+                    <span data-i18n="spec_storage">Storage</span>
+                  </dt>
+                  <dd>20 GB SSD Space<span class="spec-meter" aria-hidden="true"><span class="spec-meter-fill" style="--meter-target: 78%;"></span></span></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- Reassurance / Objection-Killer FAQ -->
+          <div class="faq-panel specs-reveal">
+            <span class="spec-card-sheen" aria-hidden="true"></span>
+            <h3 class="faq-panel-title" data-i18n="faq_title">Quick Launch FAQ</h3>
+
+            <div class="faq-item is-open">
+              <h4 class="faq-question-heading">
+                <button class="faq-question" id="faq-question-1" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+                  <span data-i18n="faq1_q">Is Ragnarok: The New World free on Steam?</span>
+                  <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+              </h4>
+              <div class="faq-answer-grid" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="false">
+                <div class="faq-answer-clip">
+                  <p data-i18n="faq1_a">Yes! It is 100% Free-to-Play on Steam. Download the official client, log in with
+                    your account, and start playing immediately.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h4 class="faq-question-heading">
+                <button class="faq-question" id="faq-question-2" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                  <span data-i18n="faq2_q">Is this an official Gravity licensed Ragnarok title?</span>
+                  <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+              </h4>
+              <div class="faq-answer-grid" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true">
+                <div class="faq-answer-clip">
+                  <p data-i18n="faq2_a">Yes. Published by Gravity Game Vision Limited and officially licensed by Gravity,
+                    ensuring authentic RO lore, music, and secure servers.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <h4 class="faq-question-heading">
+                <button class="faq-question" id="faq-question-3" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                  <span data-i18n="faq3_q">Can I sync my progress across platforms?</span>
+                  <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+              </h4>
+              <div class="faq-answer-grid" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true">
+                <div class="faq-answer-clip">
+                  <p data-i18n="faq3_a">Yes! Enjoy full cross-platform connectivity so your Steam PC adventures stay synced
+                    whenever and wherever you log in.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final High-Impact CTA Banner -->
+    <section class="section final-cta-section">
+      <div class="container">
+        <div class="final-cta-box">
+          <video class="final-cta-video" autoplay loop muted playsinline preload="auto" aria-hidden="true" tabindex="-1">
+            <source src="https://gdownload.hwrescdn.com/auto_system_upload/2026/11/1794896427919-11.mov" type="video/mp4" />
+            <source src="https://gdownload.hwrescdn.com/auto_system_upload/2026/11/1794896427919-11.mov" type="video/quicktime" />
+          </video>
+          <div class="final-cta-glow" aria-hidden="true"></div>
+          <div class="final-cta-content">
+            <span class="license-pill-mini" data-i18n="badge_license">The Brand New RO Sequel, Officially Licensed by
+              Gravity</span>
+            <h2 class="final-cta-title" data-i18n="final_title">
+              Meet Old Friends at the South Gate — Define Your Ragnarok: The New World!
+            </h2>
+            <p class="final-cta-desc" data-i18n="final_desc">
+              Install for free on Steam now, complete your First Login, and step into the seamless Midgard open world.
+            </p>
+            <a href="#go2offer#" class="btn btn-hero-primary btn-xl">
+              <span class="btn-shine" aria-hidden="true"></span>
+              <svg class="steam-icon-lg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-9.8 11.9l5.3 2.2a2.9 2.9 0 0 1 1.6-.5h.2l2.4-3.5v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.5v.2a2.9 2.9 0 0 1-5.6 1.1L2.7 18A10 10 0 1 0 12 2z" />
+              </svg>
+              <span data-i18n="cta_primary">Play Free on Steam — Start Your Adventure</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Mobile Bottom Conversion Bar -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-sticky-info">
+      <strong data-i18n="hud_free">Free-to-Play on Steam</strong>
+      <span data-i18n="hud_crossplay">Cross-Platform Sync</span>
+    </div>
+    <a href="#go2offer#" class="btn btn-primary btn-sm" data-i18n="nav_cta">Play on Steam</a>
+  </div>
+
+  <footer class="foot">
+    <nav class="legal" aria-label="Legal" data-i18n-aria-label="legal_nav">
+      <button type="button" data-legal="privacy" data-i18n="legal_privacy">Privacy Policy</button>
+      <button type="button" data-legal="terms" data-i18n="legal_terms">Terms of Use</button>
+      <button type="button" data-legal="cookies" data-i18n="legal_cookies">Cookie Policy</button>
+      <button type="button" data-legal="disclaimer" data-i18n="legal_disclaimer">Disclaimer</button>
+    </nav>
+    <p data-i18n="footer">Independent promotional page. Game name and images belong to Gravity.</p>
+    <p class="copy">&copy; Gravity Co., LTD &amp; Lee MyoungJin (studio DTDS). All rights reserved.</p>
+  </footer>
+
+  <div class="legal-modal" id="legal-modal" hidden>
+    <div class="legal-backdrop" data-legal-close aria-hidden="true"></div>
+    <section class="legal-dialog" role="dialog" aria-modal="true" aria-labelledby="legal-title-privacy" tabindex="-1">
+      <button class="legal-close" type="button" data-legal-close aria-label="Close dialog"
+        data-i18n-aria-label="legal_close">&times;</button>
+
+      <article class="legal-document" data-legal-content="privacy" hidden>
+        <h2 id="legal-title-privacy" data-i18n="legal_privacy_title">Privacy Policy</h2>
+        <p data-i18n="legal_privacy_body">This page does not provide accounts or forms and does not directly collect names, email addresses, or payment information. Your language choice may be stored locally in your browser.
+
+          Links to Steam and externally hosted media may be handled under those providers’ own privacy policies.</p>
+      </article>
+      <article class="legal-document" data-legal-content="terms" hidden>
+        <h2 id="legal-title-terms" data-i18n="legal_terms_title">Terms of Use</h2>
+        <p data-i18n="legal_terms_body">This independent promotional page is provided for general information. Game details, system requirements, availability, and offers may change; verify current information through official Gravity or Steam channels.
+
+          Use external links at your discretion and follow the terms and policies of the sites they lead to.</p>
+      </article>
+      <article class="legal-document" data-legal-content="cookies" hidden>
+        <h2 id="legal-title-cookies" data-i18n="legal_cookies_title">Cookie Policy</h2>
+        <p data-i18n="legal_cookies_body">This page does not set advertising or analytics cookies. It may use your browser’s local storage to remember your selected language.
+
+          Embedded media, fonts, or linked services may use cookies or collect technical data under their own policies.</p>
+      </article>
+      <article class="legal-document" data-legal-content="disclaimer" hidden>
+        <h2 id="legal-title-disclaimer" data-i18n="legal_disclaimer_title">Independent Promotional Disclaimer</h2>
+        <p data-i18n="legal_disclaimer_body">This is an independent promotional page. It is not affiliated with, endorsed by, or sponsored by Gravity or Valve Corporation.
+
+          Ragnarok: The New World, related game names and imagery belong to Gravity and their respective rights holders. Steam and its logo are trademarks of Valve Corporation.</p>
+      </article>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
